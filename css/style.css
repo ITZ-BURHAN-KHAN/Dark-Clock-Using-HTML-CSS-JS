@@ -1,0 +1,118 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #121922;
+    font-family: "Roboto", sans-serif;
+}
+.clock{
+    position: relative;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #08151b;
+    border-radius: 50%;
+    box-shadow: -15px -15px 15px #fff1,
+                inset -15px -15px 15px #fff1,
+                15px 15px 15px #0004,
+                inset 15px 15px 15px #0004;
+}
+.clock::before{
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 10;
+}
+.clock .hour,
+.clock .minute,
+.clock .secound{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1px;
+    height: 1px;
+    background: red;
+}
+.second, .second-indicator{
+    width: 230px;
+    height: 230px;
+}
+.minute, .minute-indicator{
+    width: 190px;
+    height: 190px;
+}
+.hour, .hour-indicator{
+    width: 160px;
+    height: 160px;
+}
+.second-indicator,
+.minute-indicator,
+.hour-indicator{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+.hour-indicator::before{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #ff105e;
+    z-index: 5;
+    border-radius: 6px;
+}
+.minute-indicator::before{
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 90px;
+    background: #fff;
+    z-index: 6;
+    border-radius: 6px;
+}
+.second-indicator::before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 140px;
+    background: #0f0;
+    z-index: 7;
+    border-radius: 6px;
+}
+.face{
+    position: absolute;
+}
+.face span{
+    position: absolute;
+    color: #fff;
+    font-size: 3rem;
+    transform: translate(-50%,-50%);
+}
+.face span:nth-child(1){
+    top: -120px;
+}
+.face span:nth-child(2){
+    left: 120px;
+}
+.face span:nth-child(3){
+    top: 120px;
+}
+.face span:nth-child(4){
+    left: -120px;
+}
+
